@@ -1,0 +1,178 @@
+package com.lanzatuapp.example;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Hashtable;
+import java.util.*;
+
+
+public class ExampleClass {
+
+	public static void main(String []args) { // COMENTARIO DE UNA LÍNEA
+		System.out.println("x");	
+		/*
+		 * Commentaries multiline;
+		 */
+		int uno = 3;
+		float dos = 3.3f;
+		double jk = uno / dos;
+		boolean tres = true;
+		boolean cuatro = false;
+		double cinco = 8.999d;
+		String nueve = "999.9999";
+		Double.parseDouble(nueve);
+		String hache = Double.toString(cinco);
+		char trece = 'c';
+		String doce = Character.toString(trece);
+		System.out.println(String.valueOf(dos));
+		
+
+		
+		if (tres) {
+			System.out.println("y" + cuatro + jk);
+						
+		}else {
+			System.out.println("x");
+		}
+			
+		System.out.println(jk);
+		
+		String jota = "4444";
+		int numero1 = Integer.parseInt(jota);
+		System.out.println(numero1);
+		
+		boolean verdad = true;
+		boolean falso = false;
+		
+		if((verdad ^ falso) &&  !(verdad == falso)){
+			System.out.println("XOR");
+		}else if (!(verdad == falso)) {
+			System.out.println("Different");
+		}
+		
+		int veint = 20;
+		System.out.println(veint++);
+		System.out.println(veint);
+		
+		int set = 70;
+		int och = 80;
+		float nov = 98.8f;
+		String flot = "89.988";
+		
+		String sumNums1 = Integer.toString(set);
+		String sumNums2 = Integer.toString(och);
+		String sumNums3 = Float.toString(nov);
+		float flot2 = Float.parseFloat(flot);
+		System.out.println(sumNums1 + sumNums2 + sumNums3);
+		System.out.println(flot2);
+		
+		int nin = 9;
+		switch (nin) {
+		case 1:
+		    System.out.println("1");
+		case 8:
+			System.out.println("8");
+		default: System.out.println("ninguno");
+		}
+			
+		try{
+		    int cero = 7/0;
+		}catch (Exception e) {
+			    	 System.out.println(e);
+		}
+		
+		try {
+			int nuev = 9/0;
+		}catch (Exception n) {
+			System.out.print(n);
+		}
+		
+		System.out.println('\n');
+		
+		int primera, contador;
+		primera = 10;
+		contador = 0;
+		
+		while (primera != contador) {
+			System.out.println(contador++);
+			
+		}
+		
+		int segunda = 13;
+		do {
+			System.out.println(segunda++);
+
+		}while (segunda < 13);
+		
+		
+		for (int i = 0; i <10; i++) {
+			System.out.println(i + i);
+		}
+		
+		String[] argus = {"L", "M", "J"};
+		
+		for (String z: argus) {
+			System.out.println(z);
+		}
+		
+		String semana[] = new String[2];
+		semana[0] = "Lunes";
+		semana[1] = "Martes";
+		
+		System.out.println(Arrays.toString(semana));
+		System.out.println(semana[1]);
+		
+		Hashtable <Integer, String> sem  = new Hashtable <Integer, String>();
+		
+		sem.put(22, "lunes");
+		
+		
+		Hashtable <Integer, String> myHash = new Hashtable <Integer, String>();
+		
+		myHash.put(1, "value");
+		myHash.put(2, "value2");
+		
+		System.out.println(myHash.get(2));
+		
+		ArrayList<String> duno = new ArrayList<String>();
+		
+		duno.add("a");
+		duno.add("b");
+		duno.add(2, "e");
+		duno.add("d");
+		
+		System.out.println(duno);
+		duno.remove("d");
+		System.out.println(duno.contains("e"));
+		System.out.println(duno.indexOf("e"));
+		System.out.println(duno);
+		System.out.println(duno.isEmpty());
+		
+		//ArrayList dune = (ArrayList) duno.clone();
+		//ArrayList <String> dune = new ArrayList <String>(duno);
+        //System.out.println(dune);
+		
+		String[] dune = new String[duno.size()];
+		duno.toArray(dune);
+		
+		System.out.println(dune[0]);
+		
+		List list = new ArrayList();
+		
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		list.remove(0);
+
+		
+		System.out.println(list.get(1));
+
+
+
+
+		
+		// Penúltimo bracket - escribir arriba	 
+		}		 
+		
+
+}
