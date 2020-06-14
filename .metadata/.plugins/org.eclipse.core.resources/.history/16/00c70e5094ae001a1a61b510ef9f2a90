@@ -1,0 +1,5 @@
+package com.darkonnen.springdemo;
+
+public interface Coach {
+
+}
