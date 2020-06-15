@@ -6505,3 +6505,17 @@ Binding(CTRL+SHIFT+T,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-06-14 19:38:11.406
+!MESSAGE An internal error occurred during: "Launching applicationContext.xml".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.xsl.jaxp.launching.internal.JAXPJavaLaunchConfigurationDelegate.getClasspath(JAXPJavaLaunchConfigurationDelegate.java:357)
+	at org.eclipse.jdt.launching.JavaLaunchDelegate.getVMRunnerConfiguration(JavaLaunchDelegate.java:96)
+	at org.eclipse.jdt.launching.JavaLaunchDelegate.launch(JavaLaunchDelegate.java:160)
+	at org.eclipse.wst.xsl.jaxp.launching.internal.JAXPJavaLaunchConfigurationDelegate.launch(JAXPJavaLaunchConfigurationDelegate.java:84)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
