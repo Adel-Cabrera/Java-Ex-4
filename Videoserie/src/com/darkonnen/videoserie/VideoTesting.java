@@ -13,7 +13,9 @@ public class VideoTesting {
 		Date dayAfterTomorrow = new Date(new Date().getYear(), new Date().getMonth(), new Date().getDay()+15);
 		Date late = new Date(new Date().getYear(), new Date().getMonth(), new Date().getDay()+19);
 		int counter = 0;
-		VideoJuego currentMax;
+		VideoJuego currentMaxVideo;
+		Serie currentMaxSerie;
+
 		
 		Serie serieUno = new Serie();
 		Serie serieDos = new Serie("Serie 2", "Creador 2");
@@ -49,21 +51,21 @@ public class VideoTesting {
 		videojuegos.add(juegoCuatro);
 		videojuegos.add(juegoCinco);
 
-		System.out.println(series.get(0).isEntregado());
-		System.out.println(series.get(1).isEntregado());
-		System.out.println(series.get(2).isEntregado());
-		System.out.println(series.get(3).isEntregado());
-		System.out.println(series.get(4).isEntregado());
-		// 2 en total
-		
-		System.out.println("*****************");
-		
-		System.out.println(videojuegos.get(0).isEntregado());
-		System.out.println(videojuegos.get(1).isEntregado());
-		System.out.println(videojuegos.get(2).isEntregado());
-		System.out.println(videojuegos.get(3).isEntregado());
-		System.out.println(videojuegos.get(4).isEntregado());
-		// 2 en total
+//		System.out.println(series.get(0).isEntregado());
+//		System.out.println(series.get(1).isEntregado());
+//		System.out.println(series.get(2).isEntregado());
+//		System.out.println(series.get(3).isEntregado());
+//		System.out.println(series.get(4).isEntregado());
+//		// 2 en total
+//		
+//		System.out.println("*****************");
+//		
+//		System.out.println(videojuegos.get(0).isEntregado());
+//		System.out.println(videojuegos.get(1).isEntregado());
+//		System.out.println(videojuegos.get(2).isEntregado());
+//		System.out.println(videojuegos.get(3).isEntregado());
+//		System.out.println(videojuegos.get(4).isEntregado());
+//		// 2 en total
 		
 		
 		for(Serie s: series){
@@ -78,6 +80,7 @@ public class VideoTesting {
 				counter++;
 			}
 			
+			
 			for(int j = 0; j < videojuegos.size() - 1; j++) { 
 				
 				if(videojuegos.get(j).getHorasEstimadas() > videojuegos.get(j).getHorasEstimadas()) {
@@ -89,16 +92,33 @@ public class VideoTesting {
 			}			
 		}
 		
-		currentMax = videojuegos.get(4);
+		for(int i = 0; i < series.size(); i++) {
+			
+			for(int j = 0; j < series.size() - 1; j++) { 
+				
+				if(series.get(j).getNumTemporadas() > series.get(j).getNumTemporadas()) {
+                    Serie temp = series.get(j);
+                    series.set(j+1, series.get(i));
+                    series.set(i, temp);
+				}
+				
+			}			
+		}
+
 		
-		
-		
+		currentMaxVideo = videojuegos.get(videojuegos.size() - 1);
+		currentMaxSerie = series.get(series.size() - 1);
+				
 		
 		System.out.println(String.format("Hay en total %s artículos entregados", counter));
 		// Son 4, perfecto.
 		
-		System.out.println(String.format("El videojuego con más cantidad de horas estimadas es de %s.", currentMax.getHorasEstimadas()));
+		System.out.println(String.format("La serie con más temporadas es de %s.", currentMaxSerie.getNumTemporadas()));
 		// Es 5, correcto.
+		
+		System.out.println(String.format("El videojuego con más cantidad de horas estimadas es de %s.", currentMaxVideo.getHorasEstimadas()));
+		// Es 5, correcto.
+
 		
 //		System.out.println(today);
 //		System.out.println(tomorrow);
