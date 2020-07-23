@@ -132,10 +132,6 @@ public class VideoTesting {
 		
 		//TODO fix this
 		
-		
-		
-
-
 	}
 
 }
